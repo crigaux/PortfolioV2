@@ -23,6 +23,7 @@
 
 html {
     cursor: none;
+    height: -webkit-fill-available;
 }
 
 @supports (-webkit-touch-callout: none) {
