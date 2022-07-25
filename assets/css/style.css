@@ -25,6 +25,13 @@ html {
     cursor: none;
 }
 
+@supports (-webkit-touch-callout: none) {
+    body {
+        /* The hack for Safari */
+        min-height: -webkit-fill-available;
+    }
+}
+
 a, button, input, label, textarea, img {
     cursor: none;
 }
