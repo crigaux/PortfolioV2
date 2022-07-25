@@ -564,6 +564,8 @@ footer {
 
 .light .heroBanner {
     background: linear-gradient(rgba(200, 200, 200, 0.9), rgba(200, 200, 200, 0.9)), url('../img/heroBanner.jpeg');
+    background-position: center;
+    background-size: cover;
     background-attachment: fixed;
 }
 
