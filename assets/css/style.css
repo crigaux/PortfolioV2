@@ -23,14 +23,6 @@
 
 html {
     cursor: none;
-    height: -webkit-fill-available;
-}
-
-@supports (-webkit-touch-callout: none) {
-    body {
-        /* The hack for Safari */
-        min-height: -webkit-fill-available;
-    }
 }
 
 a, button, input, label, textarea, img {
@@ -83,7 +75,7 @@ nav a:hover::before {
 }
 
 .heroBanner {
-    height: 100vh;
+    height: 100svh;
     width: 100%;
     border-bottom: 1px solid #f1f1f124;
     text-align: center;
