@@ -1,7 +1,19 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf');
+}
+
 *, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --bgDark: #111;
+    --fontDark: #f1f1f1;
+    /* --bgLight: #f1f1f1;;
+    --fontLight: #111; */
 }
 
 html {
@@ -13,8 +25,8 @@ a, button, input, label, textarea, img {
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #111;
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    background-color: var(--bgDark);
 }
 
 /* .customCursor {
@@ -54,7 +66,7 @@ nav a::before {
 
 nav a:hover::before {
     transform: scaleX(100%);
-    background: #f1f1f1;
+    background: var(--fontDark);
 }
 
 .heroBanner {
@@ -63,7 +75,7 @@ nav a:hover::before {
     border-bottom: 1px solid #f1f1f124;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/img/heroBanner.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('/assets/img/heroBanner.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -73,10 +85,10 @@ nav a:hover::before {
 }
 
 h1 {
-    font-size: clamp(24px, 8vw, 80px);
+    font-size: clamp(28px, 8vw, 80px);
     display: inline-block;
     font-weight: 800;
-    color: #f0f0f0;
+    color: var(--fontDark);
     text-transform: uppercase;
     background-image: linear-gradient(to right, #999, #fff);
     background-clip: text;
@@ -86,10 +98,9 @@ h1 {
 }
 
 .subtitle {
-    font-family: Raleway;
-    color: #f1f1f1;
+    color: var(--fontDark);
     font-weight: 200;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: clamp(14px, 2vw, 20px);
     margin-top: 10px;
 }
 
@@ -102,13 +113,13 @@ h1 {
     height: 50px;
     border-radius: 50%;
     border: 1px solid #f1f1f136;
-    background: #111;
+    background: var(--bgDark);
     bottom: clamp(30px, 7.5vw, 75px);
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     text-decoration: none;
-    color: #f1f1f1;
+    color: var(--fontDark);
 }
 
 .heroLink i {
@@ -118,10 +129,8 @@ h1 {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    /* border-right: 1px solid #f1f1f107;
-    border-left: 1px solid #f1f1f107; */
     padding: 0 clamp(10px, 12vw, 120px);
-    color: #f1f1f1;
+    color: var(--fontDark);
     overflow-x: hidden;
 }
 
@@ -156,7 +165,6 @@ section h2 {
 }
 
 .textDiscoverContent h3 {
-    font-family: Raleway;
     font-size: clamp(16px, 3vw, 30px);
     font-weight: 400;
     margin-bottom: 30px;
@@ -166,13 +174,12 @@ section h2 {
     line-height: 1.4;
     font-weight: 200;
     padding-right: 70px;
-    text-align: justify;
 }
 
 .discoverLink {
     max-width: 175px;
     padding: 10px 15px;
-    color: #f1f1f1;
+    color: var(--fontDark);
     margin-top: 50px;
     text-decoration: none;
     background: transparent;
@@ -237,7 +244,6 @@ section h2 {
 }
 
 .sideSlideContent h3 {
-    font-family: Raleway;
     font-weight: 300;
 }
 
@@ -280,6 +286,8 @@ section h2 {
     .sideApparitionContainer {
         flex-direction: column;
         align-items: center;
+        max-height: fit-content;
+        margin: 50px 0;
     }
 
     .sideSlideContent,
@@ -297,9 +305,8 @@ section h2 {
         text-align: center;
     }
     
-    .sideApparitionContainer {
-        max-height: fit-content;
-        margin: 50px 0;
+    .sideApparitionContainer img {
+        height: 200px;
     }
 
     .sideSlideContent {
@@ -327,7 +334,6 @@ section h2 {
 }
 
 .skillsContent h3 {
-    font-family: Raleway;
     font-weight: 300;
 }
 
@@ -349,12 +355,24 @@ section h2 {
     .leftSkills,
     .rightSkills {
         padding: 20px 10px 0 10px;
+        text-align: center;
     }
 }
 
-.toolsContainer p svg {
-    margin: 50px;
+.logoToolsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
 }
+
+.logoTools {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 90px;
+}
+
 
 @media (max-width: 600px) {
     .toolsContainer p svg {
@@ -379,7 +397,7 @@ footer {
     width: 100%;
     max-height: 300px;
     border-top: 1px solid #f1f1f167;
-    color: #f1f1f1;
+    color: var(--fontDark);
 }
 
 .footerLink {
@@ -393,5 +411,11 @@ footer {
     border: 1px solid #f1f1f136;
     background: #f1f1f136;
     text-decoration: none;
-    color: #f1f1f1;
+    color: var(--fontDark);
+}
+
+@media (max-width: 600px) {
+    footer {
+        height: 140px;
+    }
 }
