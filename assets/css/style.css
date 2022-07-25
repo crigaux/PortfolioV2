@@ -316,32 +316,6 @@ section h2 {
     }
 }
 
-footer {
-    display: flex;
-    max-height: 300px;
-    margin: 0 auto;
-    border-top: 1px solid #f1f1f167;
-    padding: 0 clamp(10px, 12vw, 120px);
-    color: #f1f1f1;
-}
-
-.footerLink {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 60px auto;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 1px solid #f1f1f136;
-    background: #f1f1f136;
-    bottom: clamp(30px, 7.5vw, 75px);
-    left: 50%;
-    transform: translateX(-50%);
-    text-decoration: none;
-    color: #f1f1f1;
-}
-
 .leftSkills,
 .rightSkills {
     padding: 50px 20px;
@@ -396,4 +370,28 @@ footer {
         display: flex;
         justify-content: space-around;
     }
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-height: 300px;
+    border-top: 1px solid #f1f1f167;
+    color: #f1f1f1;
+}
+
+.footerLink {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 60px 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid #f1f1f136;
+    background: #f1f1f136;
+    text-decoration: none;
+    color: #f1f1f1;
 }
