@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'Inconsolata';
-    src: url('../fonts/Inconsolata/Inconsolata-VariableFont_wdth_wght.ttf');
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf');
 }
 
 @font-face {
@@ -23,21 +23,47 @@
 
 html {
     scroll-behavior: smooth;
-    /* cursor: none; */
+    cursor: none;
 }
 
-a, button, input, label, textarea, img {
+a, button, input, label, textarea, img, svg, .checkbox {
     cursor: none;
 }
 
 body {
-    font-family: 'LeagueSpartan', Helvetica, sans-serif;
+    font-family: 'Montserrat', Helvetica, sans-serif;
     background-color: var(--bgDark);
 }
 
-/* .customCursor {
+.customCursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #e3e3e3c1;
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+}
 
-} */
+.customCursor::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    background: #f4f4f4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (pointer:coarse) {
+    .customCursor {
+        display: none;
+    }
+}
 
 /* Navbar Desktop */
 
@@ -54,7 +80,7 @@ nav a {
     color: #f0f0f0;
     text-decoration: none;
     font-size: clamp(1rem, 2.5vw, 2.5rem);
-    margin: 0 15px;
+    margin: 0 3rem;
     position: relative;
 }
 
@@ -83,7 +109,7 @@ nav a:hover::before {
     border-bottom: 1px solid #f1f1f124;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../img/heroBanner.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../img/heroBanner.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -94,9 +120,9 @@ nav a:hover::before {
 
 h1 {
     display: inline-block;
-    font-family: 'Courier New', Courier, monospace;
     font-size: clamp(2.5rem, 10vw, 80px);
-    font-weight: 800;
+    font-weight: 900;
+    letter-spacing: 0.3rem;
     color: var(--fontDark);
     text-transform: uppercase;
     background-image: linear-gradient(to right, #999, #fff);
@@ -107,11 +133,41 @@ h1 {
     padding: 0 0.8rem;
 }
 
+h1::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 3px;
+    background-color: var(--fontDark);
+    right: -10px;
+    top: 0;
+    animation: carret 1s infinite;
+}
+
+@keyframes carret {
+   0% {
+    opacity: 0;
+   }
+   50% {
+    opacity: 0;
+   }
+   100% {
+    opacity: 1;
+   }
+}
+
 .subtitle {
     color: var(--fontDark);
     font-weight: 200;
     font-size: clamp(14px, 2vw, 20px);
     margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.subtitle.active {
+    opacity: 1;
 }
 
 .heroLink {
@@ -130,6 +186,12 @@ h1 {
     transform: translateX(-50%);
     text-decoration: none;
     color: var(--fontDark);
+    opacity: 0;
+    transition: opacity 0.8s ease-out;
+}
+
+.heroLink.active {
+    opacity: 1;
 }
 
 .heroLink i {
@@ -287,18 +349,18 @@ section h2 {
 /* Animations */
 
 .sideApparitionContainer {
-    /* transform: translateX(30px) skew(20deg);
-    opacity: 0; */
-    /* transition: transform 0.4s ease-out, opacity 0.4s ease-out; */
+    transform: translateX(30px) skew(20deg);
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
 }
 
-/* .sideApparitionContainer:nth-child(odd) {
+.sideApparitionContainer:nth-child(odd) {
     transform: translateX(-30px) skew(-20deg);
 }
 
 .sideApparitionContainer:nth-child(even) {
     transform: translateX(30px) skew(20deg);
-} */
+}
 
 .sideApparitionContainer.active {
     transform: translateX(0px) skew(0deg);
@@ -513,15 +575,14 @@ footer {
 }
 
 .iconLightMode:hover {
-    cursor: pointer;
     transform: scale(1.1);
 }
 
 .label .ball {
     background-color: var(--bgDark);
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 26px;
+    width: 26px;
     position: absolute;
     top: 2px;
     left: 2px;
@@ -692,4 +753,17 @@ footer {
 
 .light .footerLogos {
     color: var(--fontLight);
+}
+
+.light .customCursor {
+    border: 1px solid #111111c1;
+}
+
+.light .customCursor::after {
+    border: 2px solid #f1f1f1f1;
+    background: #111;
+}
+
+.light h1::after {
+    background-color: var(--fontLight)
 }
