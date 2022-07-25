@@ -13,10 +13,19 @@
 <body>
     <div class="customCursor"></div>
 
+    <div class="darkLightToggle">
+        <input type="checkbox" class="checkbox" id="lightMode">
+        <label for="lightMode" class="label">
+            <i class="fas fa-sun iconLightMode"></i>
+            <i class="fas fa-moon iconLightMode"></i>
+            <div class="ball"></div>
+        </label>
+    </div>
+
     <nav>
-        <a href="#">Accueil</a>
-        <a href="#">Projets</a>
-        <a href="#">Compétences</a>
+        <a href="#discover">Accueil</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
     </nav>
 
     <section class="heroBanner">
@@ -40,7 +49,7 @@
                     <p>
                         Je suis actuellement en formation comme développeur web et web mobile à la MANU à Amiens. J'apprends à gérer toutes les étapes de création d'un site web, le maquettage, l'intégration Frontend et les fonctionnalités Backend. J'apprends également à adapter un site à tous les types de device, qu'il s'agisse de l'apparence ou des fonctionnalités qui facilitent la navigation mobile.
                     </p>
-                    <a href="#contact" class="discoverLink">
+                    <a href="#footer" class="discoverLink">
                         <span>Contact</span>
                         <i class="fa-solid fa-chevron-right"></i>
                     </a>
@@ -49,7 +58,7 @@
             </div>
         </section>
 
-        <section class="projectsSideApparition">
+        <section class="projectsSideApparition" id="projects">
             <h2>Mes projets</h2>
 
             <div class="sideApparitionContainer">
@@ -83,7 +92,7 @@
             </div>
         </section>
 
-        <section class="skillsContainer">
+        <section class="skillsContainer" id="skills">
             <h2>Compétences</h2>
 
             <div class="skillsContent">
@@ -115,7 +124,7 @@
                     <h3>Logiciels :</h3>
                     <div class="logoToolsContainer">
                         <div class="logoTools">
-                            <i class="fa-brands fa-figma "></i>
+                            <img src="./assets/img/figmaBlack.svg" alt="" class="figma">
                         </div>
                         <div class="logoTools">
                             <i class="fa-brands fa-trello "></i>
@@ -132,54 +141,50 @@
             
             <div class="leftToolsFrontend">
                 <div class="leftToolsFrontendContent">
-                    <h3>Langages Front :</h3>
-                    <div class="logoToolsContainer">
-                        <div class="logoTools">
-                            <i class="fa-brands fa-html5 "></i>
+                    <h3>Langages et Frameworks :</h3>
+                    <div class="logoToolsContainerLanguages">
+                        <div>
+                            <div class="logoTools">
+                                <i class="fa-brands fa-html5 "></i>
+                            </div>
+                            <div class="logoTools">
+                                <i class="fa-brands fa-css3-alt "></i>
+                            </div>
+                            <div class="logoTools">
+                                <i class="fa-brands fa-js "></i>
+                            </div>
+                            <div class="logoTools">
+                                <i class="fa-brands fa-bootstrap "></i>
+                            </div>
                         </div>
-                        <div class="logoTools">
-                            <i class="fa-brands fa-css3-alt "></i>
-                        </div>
-                        <div class="logoTools">
-                            <i class="fa-brands fa-js "></i>
-                        </div>
-                        <div class="logoTools">
-                            <i class="fa-brands fa-bootstrap "></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="rightToolsBackend">
-                <div class="rightToolsBackendContent">
-                    <h3>Langages Back :</h3>
-                    <div class="logoToolsContainer">
-                        <div class="logoTools">
-                            <i class="fa-brands fa-php "></i>
-                        </div>
-                        <div class="logoTools">
-                            <i class="fa-brands fa-symfony "></i>
-                        </div>
-                        <div class="logoTools">
-                            <i class="fa-brands fa-wordpress "></i>
-                        </div>
-                        <div class="logoTools">
-                            <i class="fa-solid fa-database "></i>
+                        <div>
+                            <div class="logoTools">
+                                <i class="fa-brands fa-php "></i>
+                            </div>
+                            <div class="logoTools">
+                                <i class="fa-brands fa-symfony "></i>
+                            </div>
+                            <div class="logoTools">
+                                <i class="fa-brands fa-wordpress "></i>
+                            </div>
+                            <div class="logoTools">
+                                <i class="fa-solid fa-database "></i>
+                            </div>
                         </div>
                     </div
                 </div>
             </div>
         </section>
 
-        <footer>
+        <footer id="footer">
             <div class="footerLogos">
-                <a href="#discover" class="footerLink">
+                <a href="mailto:crigaux057@gmail.com" class="footerLink">
                     <i class="fa-solid fa-envelope fa-2x"></i>
                 </a>
-                <a href="#discover" class="footerLink">
+                <a href="https://github.com/crigaux" class="footerLink" target="_blank">
                     <i class="fa-brands fa-github fa-2x"></i>
                 </a>
-                <a href="#discover" class="footerLink">
+                <a href="https://linkedin.com/in/claude-rigaux" class="footerLink" target="_blank">
                     <i class="fa-brands fa-linkedin fa-2x"></i>
                 </a>
             </div>

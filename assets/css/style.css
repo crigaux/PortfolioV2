@@ -17,12 +17,13 @@
 :root {
     --bgDark: #111;
     --fontDark: #f1f1f1;
-    /* --bgLight: #f1f1f1;;
-    --fontLight: #111; */
+    --bgLight: #f1f1f1;;
+    --fontLight: #111;
 }
 
 html {
-    cursor: none;
+    scroll-behavior: smooth;
+    /* cursor: none; */
 }
 
 a, button, input, label, textarea, img {
@@ -38,6 +39,8 @@ body {
 
 } */
 
+/* Navbar Desktop */
+
 nav {
     position: absolute;
     z-index: 1;
@@ -50,7 +53,7 @@ nav {
 nav a {
     color: #f0f0f0;
     text-decoration: none;
-    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-size: clamp(1rem, 2.5vw, 2.5rem);
     margin: 0 15px;
     position: relative;
 }
@@ -80,7 +83,7 @@ nav a:hover::before {
     border-bottom: 1px solid #f1f1f124;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../img/heroBanner.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../img/heroBanner.jpeg');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -101,6 +104,7 @@ h1 {
     -webkit-background-clip: text;
     color: transparent;
     position: relative;
+    padding: 0 0.8rem;
 }
 
 .subtitle {
@@ -285,7 +289,7 @@ section h2 {
 .sideApparitionContainer {
     /* transform: translateX(30px) skew(20deg);
     opacity: 0; */
-    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+    /* transition: transform 0.4s ease-out, opacity 0.4s ease-out; */
 }
 
 /* .sideApparitionContainer:nth-child(odd) {
@@ -357,6 +361,7 @@ section h2 {
 }
 
 .skillsContent h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
     font-weight: 300;
 }
 
@@ -396,12 +401,23 @@ section h2 {
     margin-bottom: 3rem;
 }
 
+.toolsContainer h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: normal;
+}
+
 .logoTools {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 90px;
     height: 90px;
+}
+
+.logoTools img {
+    object-fit: contain;
+    height: 3rem;
+    fill: white;
 }
 
 .logoTools svg {
@@ -465,4 +481,213 @@ footer {
         width: 100%;
         height: 120px;
     }
+}
+
+/* ############################################################################## */
+/* ###############            Toggle mode Dark/Light              ############### */
+/* ############################################################################## */
+
+.darkLightToggle {
+    position: fixed;
+    z-index: 4;
+    right: 1rem;
+    bottom: 2rem;
+    animation: toggleAnim 2.5s ease;
+}
+
+.checkbox {
+    display: none;
+}
+
+.label {
+    height: 54px;
+    width: 30px;
+    background-color: var(--bgLight);
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.iconLightMode:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.label .ball {
+    background-color: var(--bgDark);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transform: translateY(0px);
+    transition: transform 0.4s ease;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateY(24px);
+    background-color: var(--bgLight);
+}
+
+.checkbox:checked + .label {
+    background-color: var(--bgDark);
+}
+
+.fa-moon {
+    color:var(--bgDark);
+}
+
+.fa-sun {
+    color: var(--fontDark);
+}
+
+/* ############################################################################## */
+/* ###############                  Mode Light                    ############### */
+/* ############################################################################## */
+
+.light {
+    background-color: var(--bgLight);
+}
+
+.light nav a {
+    color: var(--fontLight);
+}
+
+.light nav a:hover::before {
+    background: var(--fontLight);
+}
+
+.light .heroBanner {
+    background: linear-gradient(rgba(200, 200, 200, 0.9), rgba(200, 200, 200, 0.9)), url('../img/heroBanner.jpeg');
+    background-attachment: fixed;
+}
+
+.light h1 {
+    color: var(--fontLight);
+    background-image: linear-gradient(to right, rgb(80, 80, 80), #111);
+    color: transparent;
+}
+
+.light .subtitle {
+    color: var(--fontLight);
+}
+
+.light .heroLink {
+    border: 1px solid #0303036c;
+    background: var(--bgLight);
+    color: var(--fontLight);
+}
+
+.light .container {
+    color: var(--fontLight);
+}
+
+.light .discoverLink {
+    color: var(--fontLight);
+    border: 1px solid #2323239e;
+}
+
+.logoToolsContainer {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.logoToolsContainerLanguages {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.logoToolsContainerLanguages div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.toolsContainer h2 {
+    margin-bottom: 3rem;
+}
+
+.toolsContainer h3 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    font-weight: normal;
+}
+
+.light .fa-trello,
+.light .fa-git-alt,
+.light .fa-windows,
+.light .fa-html5,
+.light .fa-css3-alt,
+.light .fa-js,
+.light .fa-bootstrap,
+.light .fa-php,
+.light .fa-symfony,
+.light .fa-wordpress,
+.light .fa-database
+ {
+    color: var(--fontLight);
+}
+
+.fa-trello:hover {
+    color: #227CF3;
+}
+
+.fa-git-alt:hover {
+    color: #E84E31;
+}
+
+.fa-windows:hover {
+    color: #01A9EA;
+}
+
+.fa-html5:hover {
+    color: #DD4B25;
+}
+
+.fa-css3-alt:hover {
+    color: #254BDD;
+}
+
+.fa-js:hover {
+    color: #EFD81D;
+}
+
+.fa-bootstrap:hover {
+    color: #7010EF;
+}
+
+.fa-php:hover {
+    color: #7377AD;
+}
+
+.fa-symfony:hover {
+    color: rgb(157, 157, 157);
+}
+
+.fa-wordpress:hover {
+    color: #30353A;
+}
+
+.fa-database:hover {
+    color: #DD8A00;
+}
+
+.light footer {
+    border-top: 1px solid #2d2d2d67;
+    color: var(--fontLight);
+}
+
+.light .footerLink {
+    border: 1px solid #a0a0a036;
+    background: #b9b9b936;
+    color: var(--fontLight);
+}
+
+.light .footerLogos {
+    color: var(--fontLight);
 }
