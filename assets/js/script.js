@@ -105,6 +105,7 @@ const slideContent = [
     ...document.querySelectorAll('.sideApparitionContainer h3'),
     document.querySelector('.leftSkillsContent'),
     document.querySelector('.rightSkillsContent'),
+    ...document.querySelectorAll('.skillsContainer h3'),
     ...document.querySelectorAll('.logoTools'),
     ...document.querySelectorAll('.toolsContainer h3'),
 ]

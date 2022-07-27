@@ -298,6 +298,7 @@ h3,
 .discoverMainImage,
 .rightSkillsContent,
 .leftSkillsContent,
+.skillsContainer h3,
 .logoTools {
     opacity: 0;
     transform: translateY(-5px);
@@ -313,6 +314,7 @@ h3.active,
 .discoverMainImage.active,
 .rightSkillsContent.active,
 .leftSkillsContent.active,
+.skillsContainer h3.active,
 .logoTools.active  {
     opacity: 1;
     transform: translateY(0);
@@ -380,11 +382,48 @@ h3.active,
     line-height: 1.2;
 }
 
-.sideApparitionContainer img {
+.projectImg {
+    height: auto;
     width: 65%;
-    height: 350px;
-    object-fit: cover;
+    position: relative;
+}
+  
+.sideApparitionContainer img {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    object-fit: contain;
     object-position: center;
+}
+  
+.imgOverlay {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
+}
+  
+.projectImg:hover img {
+    opacity: 0.3;
+}
+  
+.projectImg:hover .imgOverlay {
+    opacity: 1;
+}
+  
+.text {
+    background-color: #111;
+    color: var(--fontDark);
+    border: 1px solid #2323239e;
+    font-size: 16px;
+    padding: 16px 32px;
+    text-decoration: none;
 }
 
 /* Animations */
