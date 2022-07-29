@@ -109,7 +109,7 @@ nav a:hover::before {
     border-bottom: 1px solid #f1f1f124;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../img/heroBanner.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.374), rgba(0, 0, 0, 0.308)), url('../img/fond-connexion-reseau-degrade_23-2148865392.webp');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -704,7 +704,7 @@ footer {
 }
 
 .light .heroBanner {
-    background: linear-gradient(rgba(200, 200, 200, 0.9), rgba(200, 200, 200, 0.9)), url('../img/heroBanner.jpeg');
+    background: linear-gradient(rgba(200, 200, 200, 0.284), rgba(200, 200, 200, 0.262)), url('../img/fond-blanc-hexagone-bleu-tech_1017-19366.webp');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -712,7 +712,7 @@ footer {
 
 .light h1 {
     color: var(--fontLight);
-    background-image: linear-gradient(to right, rgb(80, 80, 80), #111);
+    background-image: linear-gradient(to right, rgb(62, 62, 62), #111);
     color: transparent;
 }
 
