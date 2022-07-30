@@ -58,7 +58,7 @@ function typewriter(target, text, index) {
         setTimeout(() => {
             target.textContent += text[index];
             typewriter(target, text, index + 1)
-        }, 100)
+        }, 80)
     }
 }
 
@@ -68,7 +68,7 @@ setTimeout(() => {
 
 setTimeout(() => {
     typewriter(subtitle, txtSubtitle, 0)
-}, 2100)
+}, 1900)
 
 // ######################################################
 // #####                Down button                 ##### 

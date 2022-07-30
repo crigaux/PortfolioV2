@@ -15,10 +15,10 @@
 }
 
 :root {
-    --bgDark: #111;
-    --fontDark: #f1f1f1;
-    --bgLight: #f1f1f1;;
-    --fontLight: #111;
+    --bgDark: #00081F;
+    --fontDark: #ffffff;
+    --bgLight: #E7E7E7;;
+    --fontLight: #000F20;
 }
 
 html {
@@ -109,7 +109,7 @@ nav a:hover::before {
     border-bottom: 1px solid #f1f1f124;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url('../img/heroBanner.jpeg');
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/fond-connexion-reseau-degrade_23-2148865392.webp');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -387,7 +387,7 @@ h3.active,
     width: 65%;
     position: relative;
 }
-  
+
 .sideApparitionContainer img {
     opacity: 1;
     display: block;
@@ -705,7 +705,7 @@ footer {
 }
 
 .light .heroBanner {
-    background: linear-gradient(rgba(200, 200, 200, 0.9), rgba(200, 200, 200, 0.9)), url('../img/heroBanner.jpeg');
+    background: linear-gradient(to top, rgba(200, 200, 200, 0.40), rgba(200, 200, 200, 0.40)), url('../img/fond-blanc-hexagone-bleu-tech_1017-19366.webp');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -713,7 +713,7 @@ footer {
 
 .light h1 {
     color: var(--fontLight);
-    background-image: linear-gradient(to right, rgb(80, 80, 80), #111);
+    background-image: linear-gradient(to right, rgb(50, 50, 50), #111);
     color: transparent;
 }
 
