@@ -447,6 +447,22 @@ h3.active,
     opacity: 1;
 }
 
+.hidedProject {
+    display: none;
+}
+
+.buttonMoreProject {
+    width: 20%;
+    padding: 10px 15px;
+    color: var(--fontDark);
+    margin-left: 40%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #f1f1f168;
+}
+
 @media (max-width: 600px) {
     .sideApparitionContainer {
         flex-direction: column;
@@ -479,12 +495,18 @@ h3.active,
         padding: 0;
     }
 
-    .sideApparitionContainer:nth-child(odd) img {
+    .sideApparitionContainer:nth-child(even) img {
         order: 2;
     }
 
-    .sideApparitionContainer:nth-child(odd) .sideSlideContent {
+    .sideApparitionContainer:nth-child(even) .sideSlideContent {
         order: 1;
+    }
+
+    .projectImg {
+        height: auto;
+        width: 100%;
+        position: relative;
     }
 }
 
@@ -531,6 +553,11 @@ h3.active,
 
     .skillsContainer h2 {
         margin-bottom: 2rem;
+    }
+
+    img {
+        object-fit: cover;
+
     }
 }
 

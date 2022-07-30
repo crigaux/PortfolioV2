@@ -128,3 +128,12 @@ function handleIntersect(entries) {
         }
     })
 }
+
+document.querySelector('.buttonMoreProject').addEventListener('click', () => {
+    document.querySelectorAll('.hidedProject').forEach(element => {
+        element.classList.remove('hidedProject');
+        element.classList.add('showProject');
+    })
+    document.querySelector('.buttonMoreProject').textContent = 'Afficher Moins';
+    document.querySelector('.buttonMoreProject').style.display='none';
+})
