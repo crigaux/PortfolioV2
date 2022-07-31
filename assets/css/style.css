@@ -109,7 +109,7 @@ nav a:hover::before {
     border-bottom: 1px solid #f1f1f124;
     text-align: center;
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/fond-connexion-reseau-degrade_23-2148865392.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../img/456503.png');
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -759,6 +759,11 @@ footer {
 }
 
 .light .discoverLink {
+    color: var(--fontLight);
+    border: 1px solid #2323239e;
+}
+
+.light .buttonMoreProject {
     color: var(--fontLight);
     border: 1px solid #2323239e;
 }
