@@ -595,6 +595,7 @@ h3.active,
     font-size: 3rem;
 }
 
+
 @media (max-width: 600px) {
     .toolsContainer p svg {
         margin: 25px;
@@ -772,13 +773,13 @@ footer {
 .logoToolsContainer {
     display: flex;
     justify-content: space-around;
-    margin: 1rem 0;
+    margin: 2rem 0;
 }
 
 .logoToolsContainerLanguages {
     display: flex;
     flex-direction: column;
-    margin-top: 1rem;
+    margin: 2rem 0;
 }
 
 .logoToolsContainerLanguages div {
