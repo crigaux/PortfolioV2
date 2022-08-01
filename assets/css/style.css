@@ -220,7 +220,7 @@ h1::after {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 clamp(10px, 12vw, 120px);
     color: var(--fontDark);
@@ -262,7 +262,7 @@ section h2 {
 .textDiscoverContent {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     width: 50%;
     padding: 1rem 0;
 }
@@ -321,7 +321,7 @@ h3.active,
     transform: translateY(0);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .discover {
         margin: 20px 0 0 0;
     }
@@ -348,6 +348,10 @@ h3.active,
     .discoverContent img {
         display: none;
     }
+
+    h1::after {
+        display: none;
+    }
 }
 
 .projectsSideApparition {
@@ -358,7 +362,7 @@ h3.active,
     display: flex;
     justify-content: center;
     align-items: center;
-    max-height: 300px;
+    max-height: 600px;
     margin: 100px 0;
 }
 
@@ -393,13 +397,13 @@ h3.active,
     opacity: 1;
     display: block;
     width: 100%;
-    height: auto;
+    height: 400px;
     transition: .5s ease;
     backface-visibility: hidden;
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 }
-  
+
 .imgOverlay {
     transition: .5s ease;
     opacity: 0;
@@ -409,15 +413,15 @@ h3.active,
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%)
 }
-  
+
 .projectImg:hover img {
     opacity: 0.3;
 }
-  
+
 .projectImg:hover .imgOverlay {
     opacity: 1;
 }
-  
+
 .text {
     background-color: #111;
     color: var(--fontDark);
@@ -477,6 +481,10 @@ h3.active,
         width: 100%;
     }
 
+    .sideSlideContent h3 {
+        margin-top: 2rem;
+    }
+
     .sideSlideContent h3,
     .sideSlideContent p {
         text-align: center;
@@ -496,11 +504,11 @@ h3.active,
         padding: 0;
     }
 
-    .sideApparitionContainer:nth-child(even) img {
+    .sideApparitionContainer:nth-child(odd) .projectImg {
         order: 2;
     }
 
-    .sideApparitionContainer:nth-child(even) .sideSlideContent {
+    .sideApparitionContainer:nth-child(odd) .sideSlideContent {
         order: 1;
     }
 
@@ -508,6 +516,67 @@ h3.active,
         height: auto;
         width: 100%;
         position: relative;
+    }
+
+    .buttonMoreProject {
+        margin-left: 15%;
+        width: 70%;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 900px) {
+    .sideApparitionContainer {
+        flex-direction: column;
+        align-items: center;
+        max-height: fit-content;
+        margin: 2rem 0;
+    }
+
+    .sideSlideContent,
+    .sideApparitionContainer img {
+        width: 100%;
+    }
+
+    .sideSlideContent h3 {
+        margin-top: 2rem;
+    }
+
+    .sideSlideContent h3,
+    .sideSlideContent p {
+        text-align: center;
+    }
+
+    .sideSlideContent:nth-child(even) h3,
+    .sideSlideContent:nth-child(even) p {
+        text-align: center;
+    }
+    
+    .sideApparitionContainer img {
+        height: 350px;
+    }
+
+    .sideSlideContent {
+        margin-bottom: 30px;
+        padding: 0;
+    }
+
+    .sideApparitionContainer:nth-child(odd) .projectImg {
+        order: 2;
+    }
+
+    .sideApparitionContainer:nth-child(odd) .sideSlideContent {
+        order: 1;
+    }
+
+    .projectImg {
+        height: auto;
+        width: 100%;
+        position: relative;
+    }
+
+    .buttonMoreProject {
+        margin-left: 15%;
+        width: 70%;
     }
 }
 
@@ -806,8 +875,7 @@ footer {
 .light .fa-php,
 .light .fa-symfony,
 .light .fa-wordpress,
-.light .fa-database
- {
+.light .fa-database{
     color: var(--fontLight);
 }
 
