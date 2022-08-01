@@ -71,20 +71,6 @@ setTimeout(() => {
 }, 1900)
 
 // ######################################################
-// #####                Down button                 ##### 
-// ######################################################
-
-heroPushLink.addEventListener('click', slidedown)
-
-function slidedown(e) {
-    e.preventDefault()
-    window.scrollTo({
-        top: document.querySelector(`${e.target.getAttribute("href")}`).offsetTop,
-        behavior: "smooth"
-    })
-}
-
-// ######################################################
 // #####             Animations projets             ##### 
 // ######################################################
 

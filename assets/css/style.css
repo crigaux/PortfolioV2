@@ -146,15 +146,15 @@ h1::after {
 }
 
 @keyframes carret {
-   0% {
-    opacity: 0;
-   }
-   50% {
-    opacity: 0;
-   }
-   100% {
-    opacity: 1;
-   }
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .subtitle {
@@ -209,12 +209,13 @@ h1::after {
     }
 
     nav {
-        width: 80%;
-        margin-left: 10%;
+        width: 90%;
+        margin-left: 5%;
     }
 
     nav a {
-        margin: 0 1rem;
+        margin: 0 0.5rem;
+        font-size: 0.8/rem;
     }
 }
 
